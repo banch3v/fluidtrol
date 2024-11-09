@@ -11,15 +11,16 @@ const theme = extendTheme({
       600: "#001F3D",
     },
     secondary: {
-      500: "#52A6D7",
-      600: "#3F8FBB",
+      500: "#0094e1",
+      600: "#0079B7",
     },
     accent: {
       500: "#FFAE00",
     },
-    background: {
-      300: "#f2f4f6",
-      500: "#909090",
+    gray: {
+      300: "#D8DDE2",
+      500: "#95a3b2",
+      600: "#8091a2",
     },
   },
   components: {
@@ -69,14 +70,16 @@ export const fullWidth = {
   justify: "center",
   align: "center",
   px: {
-    base: "20px",
-    md: "40px",
+    base: "15px",
+    md: "30px",
   },
 };
 
 export const inGrid = {
-  direction: "column",
+  direction: { base: "column", md: "row" },
+  gap: "20px",
   width: "100%",
   maxW: "1200px",
   mx: "auto",
+  justify: "space-between",
 };

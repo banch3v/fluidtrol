@@ -19,6 +19,7 @@ const theme = extendTheme({
     },
     gray: {
       300: "#f2f4f6",
+      400: "#bfc8d0",
       500: "#95a3b2",
       600: "#8091a2",
     },
@@ -32,12 +33,17 @@ const theme = extendTheme({
         maxWidth: "330px",
         height: "44px",
         minHeight: "44px",
+        whiteSpace: "normal",
+        wordBreak: "break-word",
       },
       variants: {
         solid: {
           bg: "secondary.300",
           color: "white",
           _hover: {
+            bg: "secondary.500",
+          },
+          _active: {
             bg: "secondary.500",
           },
         },

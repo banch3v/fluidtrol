@@ -5,6 +5,7 @@ import Products from "../components/Products/Products";
 import products from "../data/products";
 import usps from "../data/usps";
 import WhyTrustUs from "../components/WhyTrustUs/WhyTrustUs";
+import CTA from "../components/CTA/CTA";
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
       <Products title={"Products Categories"} products={products} />
       <Products title={"Solutions"} products={products} />
       <WhyTrustUs usps={usps} />
+      <CTA
+        title={"The Very Best in Customer Service, Customization, and Delivery"}
+      />
     </>
   );
 }

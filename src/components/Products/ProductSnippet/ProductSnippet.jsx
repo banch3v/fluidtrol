@@ -33,7 +33,9 @@ export default function ProductSnippet({
         <img src={image} alt={title + " " + subtitle} />
       </CardBody>
       <CardFooter>
-        <Button variant={isAccent ? "solid" : "outline"}>View Product</Button>
+        <Button variant={isAccent ? "solid" : "outline"}>
+          View {title} Stainers
+        </Button>
       </CardFooter>
     </Card>
   );

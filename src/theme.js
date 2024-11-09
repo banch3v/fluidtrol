@@ -11,8 +11,8 @@ const theme = extendTheme({
       600: "#001F3D",
     },
     secondary: {
+      300: "#52a6d7",
       500: "#0094e1",
-      600: "#0079B7",
     },
     accent: {
       500: "#FFAE00",
@@ -35,23 +35,23 @@ const theme = extendTheme({
       },
       variants: {
         solid: {
-          bg: "secondary.500",
+          bg: "secondary.300",
           color: "white",
           _hover: {
-            bg: "primary.500",
+            bg: "secondary.500",
           },
         },
         outline: {
           bg: "transparent",
-          color: "secondary.500",
+          color: "secondary.300",
           border: "1px solid",
-          borderColor: "secondary.500",
+          borderColor: "secondary.300",
           _hover: {
             bg: "secondary.500",
             color: "white",
           },
           _active: {
-            bg: "secondary.600",
+            bg: "secondary.500",
             color: "white",
           },
         },
@@ -82,4 +82,16 @@ export const inGrid = {
   maxW: "1200px",
   mx: "auto",
   justify: "space-between",
+};
+
+export const title48Bold = {
+  fontSize: { base: "28px", md: "48px" },
+  fontWeight: "bold",
+  color: "primary.500",
+};
+
+export const title24Regular = {
+  fontSize: { base: "20px", md: "24px" },
+  fontWeight: "regular",
+  color: "primary.500",
 };

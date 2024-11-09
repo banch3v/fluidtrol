@@ -1,6 +1,6 @@
 import { Flex, Image, HStack } from "@chakra-ui/react";
 import { fullWidth, inGrid } from "../../theme";
-import SearchBar from "../Searchbar/Searchbar";
+import SearchBar from "./SearchBar/SearchBar";
 import CartButton from "./CartButton/CartButton";
 import Login from "./Login/Login";
 import Menu from "./Menu/Menu";

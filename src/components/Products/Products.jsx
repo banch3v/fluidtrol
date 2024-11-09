@@ -21,11 +21,11 @@ export default function Products({ title, products }) {
           </Box>
           <Grid
             templateColumns={{
-              base: "repeat(1, 3fr)",
-              sm: "repeat(2, 2fr)",
+              base: "repeat(1, 1fr)",
+              sm: "repeat(2, 1fr)",
               md: "repeat(3, 1fr)",
             }}
-            gap={10}
+            gap={{ base: 6, md: 10 }}
           >
             {products.map((product, index) => (
               <GridItem key={product.id} w="100%">

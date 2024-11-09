@@ -3,6 +3,8 @@ import { Button, Flex, Heading } from "@chakra-ui/react";
 import { fullWidth, inGrid, title48Bold } from "../theme";
 import Products from "../components/Products/Products";
 import products from "../data/products";
+import usps from "../data/usps";
+import WhyTrustUs from "../components/WhyTrustUs/WhyTrustUs";
 
 export default function Home() {
   return (
@@ -20,6 +22,7 @@ export default function Home() {
       </Flex>
       <Products title={"Products Categories"} products={products} />
       <Products title={"Solutions"} products={products} />
+      <WhyTrustUs usps={usps} />
     </>
   );
 }

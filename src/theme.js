@@ -18,7 +18,7 @@ const theme = extendTheme({
       500: "#FFAE00",
     },
     gray: {
-      300: "#D8DDE2",
+      300: "#f2f4f6",
       500: "#95a3b2",
       600: "#8091a2",
     },
@@ -93,5 +93,11 @@ export const title48Bold = {
 export const title24Regular = {
   fontSize: { base: "20px", md: "24px" },
   fontWeight: "regular",
+  color: "primary.500",
+};
+
+export const title28Bold = {
+  fontSize: { base: "22px", md: "28px" },
+  fontWeight: "bold",
   color: "primary.500",
 };

@@ -4,6 +4,7 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   fonts: {
     body: "Neue Haas Unica, sans-serif",
+    heading: "Neue Haas Unica, sans-serif",
   },
   colors: {
     primary: {
@@ -64,6 +65,11 @@ const theme = extendTheme({
       },
       defaultProps: {
         variant: "solid",
+      },
+    },
+    Text: {
+      baseStyle: {
+        color: "black",
       },
     },
   },

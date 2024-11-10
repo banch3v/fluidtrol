@@ -1,4 +1,12 @@
-import { Flex, VStack, Text, Heading, HStack, Image } from "@chakra-ui/react";
+import {
+  Flex,
+  VStack,
+  Text,
+  Heading,
+  HStack,
+  Image,
+  Box,
+} from "@chakra-ui/react";
 import { fullWidth, inGrid, title48Bold } from "../../theme";
 
 export default function Footer() {
@@ -17,14 +25,16 @@ export default function Footer() {
         justifyContent="space-between"
         gap="30px"
       >
-        <Text
-          fontSize="16px"
-          color="gray.600"
-          flex="1"
-          textAlign={{ base: "center", lg: "left" }}
-        >
-          © 2023 Fluidtrol Process Technologies, Inc. All Rights Reserved
-        </Text>
+        <Box flex="1">
+          <Text
+            fontSize="16px"
+            color="gray.600"
+            textAlign={{ base: "center", lg: "left" }}
+            maxW="300px"
+          >
+            © 2023 Fluidtrol Process Technologies, Inc. All Rights Reserved
+          </Text>
+        </Box>
         <VStack spacing="0px" flex="1">
           <Heading
             as="div"
@@ -49,7 +59,12 @@ export default function Footer() {
             <a href="mailto:fpt@fluidtrol.com">fpt@fluidtrol.com</a>
           </Heading>
         </VStack>
-        <HStack spacing="30px" flex="1" mt={{ base: "10px", lg: "0" }}>
+        <HStack
+          spacing="30px"
+          flex="1"
+          mt={{ base: "10px", lg: "0" }}
+          justifyContent="flex-end"
+        >
           <Image src="icon-linkedin.svg" alt="Facebook" />
           <Image src="icon-twitter.svg" alt="Facebook" />
           <Image src="icon-facebook.svg" alt="Facebook" />

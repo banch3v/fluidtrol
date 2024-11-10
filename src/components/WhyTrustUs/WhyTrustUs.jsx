@@ -13,8 +13,13 @@ import PropTypes from "prop-types";
 export default function WhyTrustUs({ usps }) {
   return (
     <Flex {...fullWidth} backgroundColor="gray.300">
-      <Flex {...inGrid} direction="column" alignItems="left" py="80px">
-        <Heading {...title28Bold} mb="30px">
+      <Flex
+        {...inGrid}
+        direction="column"
+        alignItems="left"
+        py={{ base: "60px", md: "80px" }}
+      >
+        <Heading {...title28Bold} mb={{ base: "15px", md: "30px" }}>
           Why Trust Fluidtrol?
         </Heading>
         <Grid templateColumns={{ base: "1 1fr", md: "3fr 1fr" }} gap={10}>

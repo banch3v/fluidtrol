@@ -3,13 +3,19 @@ import { fullWidth, inGrid, title48Bold } from "../../theme";
 
 export default function Footer() {
   return (
-    <Flex {...fullWidth} backgroundColor="primary.500">
+    <Flex
+      {...fullWidth}
+      backgroundColor="primary.500"
+      borderTop="4px solid"
+      borderColor="accent.500"
+    >
       <Flex
         {...inGrid}
         direction={{ base: "column", lg: "row" }}
-        py="40px"
+        py={{ base: "60px", md: "80px" }}
         alignItems="center"
-        gap={{ base: "30px", lg: "50px" }}
+        justifyContent="space-between"
+        gap="30px"
       >
         <Text
           fontSize="16px"

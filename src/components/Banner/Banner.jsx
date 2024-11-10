@@ -1,5 +1,6 @@
 import { Flex, Heading } from "@chakra-ui/react";
 import { fullWidth, inGrid, title48Bold, title24Regular } from "../../theme";
+import PropTypes from "prop-types";
 
 export default function Banner({ backgroundImg, title, subtitle }) {
   return (
@@ -7,7 +8,7 @@ export default function Banner({ backgroundImg, title, subtitle }) {
       as="section"
       {...fullWidth}
       backgroundImage={`url(${backgroundImg})`}
-      backgroundPosition={{ base: "center right", md: "center" }}
+      backgroundPosition="center right"
       backgroundSize="cover"
     >
       <Flex
@@ -29,3 +30,9 @@ export default function Banner({ backgroundImg, title, subtitle }) {
     </Flex>
   );
 }
+
+Banner.propTypes = {
+  backgroundImg: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+};

@@ -15,8 +15,8 @@ export default function MenuDropdown() {
         </Heading>
         <Grid
           templateColumns={{
-            base: "repeat(2, 3fr)",
-            sm: "repeat(3, 2fr)",
+            base: "repeat(2, 1fr)",
+            sm: "repeat(3, 1fr)",
             md: "repeat(5, 1fr)",
           }}
           gap={6}
@@ -37,11 +37,13 @@ export default function MenuDropdown() {
               Products
             </Heading>
             <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
+            <Link>Commercial Reducers</Link>
+            <Link>Modulating Float Valves</Link>
+            <Link>Specialty Filters</Link>
+            <Link>Sand Filters</Link>
+            <Link>Spare Parts</Link>
           </GridItem>
+
           <GridItem
             w="100%"
             display="flex"
@@ -55,14 +57,13 @@ export default function MenuDropdown() {
               fontWeight="semibold"
               mb="10px"
             >
-              Products
+              Solutions
             </Heading>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
+            <Link>Aquatic</Link>
+            <Link>General Water</Link>
+            <Link>Industrial</Link>
           </GridItem>
+
           <GridItem
             w="100%"
             display="flex"
@@ -76,14 +77,14 @@ export default function MenuDropdown() {
               fontWeight="semibold"
               mb="10px"
             >
-              Products
+              Design
             </Heading>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
+            <Link>Strainer Basket Details</Link>
+            <Link>Quality Control</Link>
+            <Link>Our Design Process</Link>
+            <Link>White Papers</Link>
           </GridItem>
+
           <GridItem
             w="100%"
             display="flex"
@@ -97,14 +98,11 @@ export default function MenuDropdown() {
               fontWeight="semibold"
               mb="10px"
             >
-              Products
+              Resources
             </Heading>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
+            <Link>Blog</Link>
           </GridItem>
+
           <GridItem
             w="100%"
             display="flex"
@@ -118,13 +116,12 @@ export default function MenuDropdown() {
               fontWeight="semibold"
               mb="10px"
             >
-              Products
+              Company
             </Heading>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
-            <Link>Basket Strainers</Link>
+            <Link>About Us</Link>
+            <Link>Job Openings</Link>
+            <Link>Contact Us</Link>
+            <Link>Privacy Policy</Link>
           </GridItem>
         </Grid>
       </Flex>

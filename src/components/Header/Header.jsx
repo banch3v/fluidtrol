@@ -3,9 +3,23 @@ import { fullWidth, inGrid } from "../../theme";
 import SearchBar from "./SearchBar/SearchBar";
 import MenuDropdown from "./MenuDropdown/MenuDropdown";
 import IconLink from "../IconLink/IconLink";
+import { useEffect } from "react";
 
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (!event.target.closest(".menu") && !event.target.closest(".menu")) {
+        onClose();
+      }
+    }
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [onClose]);
 
   return (
     <>
@@ -54,6 +68,7 @@ export default function Header() {
                 text={"cart"}
                 staticColor={"#8091a2"}
                 action={onOpen}
+                className="menu"
               />
             ) : (
               <IconLink
@@ -61,6 +76,7 @@ export default function Header() {
                 text={"cart"}
                 staticColor={"#8091a2"}
                 action={onClose}
+                className="menu"
               />
             )}
           </HStack>

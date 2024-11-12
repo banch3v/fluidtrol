@@ -10,6 +10,7 @@ export default function IconLink({
   hoverColor = "#fff",
   size = "35px",
   action,
+  className,
 }) {
   const [svgContent, setSvgContent] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -33,6 +34,7 @@ export default function IconLink({
   return (
     <VStack
       as="a"
+      className={className}
       href={link}
       spacing="2px"
       onMouseEnter={() => setIsHovered(true)}
@@ -80,4 +82,5 @@ IconLink.propTypes = {
   hoverColor: PropTypes.string,
   size: PropTypes.string,
   action: PropTypes.func,
+  className: PropTypes.string,
 };

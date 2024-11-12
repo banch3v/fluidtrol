@@ -1,12 +1,11 @@
-import { Flex, Image, HStack } from "@chakra-ui/react";
+import { Flex, Image, HStack, useDisclosure, Collapse } from "@chakra-ui/react";
 import { fullWidth, inGrid } from "../../theme";
 import SearchBar from "./SearchBar/SearchBar";
 import MenuDropdown from "./MenuDropdown/MenuDropdown";
-import { useState } from "react";
 import IconLink from "../IconLink/IconLink";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
@@ -49,25 +48,27 @@ export default function Header() {
               staticColor={"#8091a2"}
             />
             <IconLink icon={"user.svg"} text={"cart"} staticColor={"#8091a2"} />
-            {!isMenuOpen ? (
+            {!isOpen ? (
               <IconLink
                 icon={"plus.svg"}
                 text={"cart"}
                 staticColor={"#8091a2"}
-                action={() => setIsMenuOpen(true)}
+                action={onOpen}
               />
             ) : (
               <IconLink
                 icon={"x.svg"}
                 text={"cart"}
                 staticColor={"#8091a2"}
-                action={() => setIsMenuOpen(false)}
+                action={onClose}
               />
             )}
           </HStack>
         </Flex>
       </Flex>
-      {isMenuOpen && <MenuDropdown />}
+      <Collapse in={isOpen} unmountOnExit={true} animateOpacity>
+        {isOpen && <MenuDropdown />}
+      </Collapse>
     </>
   );
 }

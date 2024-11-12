@@ -1,5 +1,6 @@
 import { Flex, Heading, Grid, GridItem, Link } from "@chakra-ui/react";
 import { fullWidth, inGrid } from "../../../theme";
+import PropTypes from "prop-types";
 
 export default function MenuDropdown() {
   return (
@@ -128,3 +129,7 @@ export default function MenuDropdown() {
     </Flex>
   );
 }
+
+MenuDropdown.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+};

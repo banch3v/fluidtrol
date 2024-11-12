@@ -1,5 +1,5 @@
 import { Flex, Heading, Grid, GridItem, Link } from "@chakra-ui/react";
-import { fullWidth, inGrid } from "../../../../theme";
+import { fullWidth, inGrid } from "../../../theme";
 
 export default function MenuDropdown() {
   return (

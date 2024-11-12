@@ -8,6 +8,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { fullWidth, inGrid, title48Bold } from "../../theme";
+import IconLink from "../IconLink/IconLink";
 
 export default function Footer() {
   return (
@@ -65,9 +66,9 @@ export default function Footer() {
           mt={{ base: "10px", lg: "0" }}
           justifyContent="flex-end"
         >
-          <Image src="icon-linkedin.svg" alt="Facebook" />
-          <Image src="icon-twitter.svg" alt="Facebook" />
-          <Image src="icon-facebook.svg" alt="Facebook" />
+          <IconLink icon={"icon-linkedin.svg"} size="40px" />
+          <IconLink icon={"icon-twitter.svg"} size="40px" />
+          <IconLink icon={"icon-facebook.svg"} size="40px" />
         </HStack>
       </Flex>
     </Flex>

@@ -1,14 +1,16 @@
 import { Flex, Image, HStack } from "@chakra-ui/react";
 import { fullWidth, inGrid } from "../../theme";
 import SearchBar from "./SearchBar/SearchBar";
-import CartButton from "./CartButton/CartButton";
-import Login from "./Login/Login";
-import Menu from "./Menu/Menu";
-import MenuDropdown from "./Menu/MenuDropdown/MenuDropdown";
+import MenuDropdown from "./MenuDropdown/MenuDropdown";
 import { useState } from "react";
+import IconLink from "../IconLink/IconLink";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function handleMenu() {
+    setIsMenuOpen((prevState) => !prevState);
+  }
 
   return (
     <>
@@ -45,11 +47,27 @@ export default function Header() {
             align="center"
             order={{ base: 2, md: 3 }}
           >
-            <CartButton />
-            <Login />
-            <Menu
-              setIsMenuOpen={() => setIsMenuOpen((prevState) => !prevState)}
+            <IconLink
+              icon={"basket.svg"}
+              text={"cart"}
+              staticColor={"#8091a2"}
             />
+            <IconLink icon={"user.svg"} text={"cart"} staticColor={"#8091a2"} />
+            {!isMenuOpen ? (
+              <IconLink
+                icon={"plus.svg"}
+                text={"cart"}
+                staticColor={"#8091a2"}
+                action={handleMenu}
+              />
+            ) : (
+              <IconLink
+                icon={"x.svg"}
+                text={"cart"}
+                staticColor={"#8091a2"}
+                action={handleMenu}
+              />
+            )}
           </HStack>
         </Flex>
       </Flex>

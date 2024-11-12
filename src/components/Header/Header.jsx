@@ -2,30 +2,11 @@ import { Flex, Image, HStack } from "@chakra-ui/react";
 import { fullWidth, inGrid } from "../../theme";
 import SearchBar from "./SearchBar/SearchBar";
 import MenuDropdown from "./MenuDropdown/MenuDropdown";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import IconLink from "../IconLink/IconLink";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
-
-  function handleMenu() {
-    setIsMenuOpen((prevState) => !prevState);
-  }
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
     <>
@@ -73,24 +54,20 @@ export default function Header() {
                 icon={"plus.svg"}
                 text={"cart"}
                 staticColor={"#8091a2"}
-                action={handleMenu}
+                action={() => setIsMenuOpen(true)}
               />
             ) : (
               <IconLink
                 icon={"x.svg"}
                 text={"cart"}
                 staticColor={"#8091a2"}
-                action={handleMenu}
+                action={() => setIsMenuOpen(false)}
               />
             )}
           </HStack>
         </Flex>
       </Flex>
-      {isMenuOpen && (
-        <div ref={menuRef}>
-          <MenuDropdown />
-        </div>
-      )}
+      {isMenuOpen && <MenuDropdown />}
     </>
   );
 }

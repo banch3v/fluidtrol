@@ -49,7 +49,7 @@ export default function IconLink({
         dangerouslySetInnerHTML={{
           __html: svgContent
             ? svgContent
-                .replace(/<svg /, `<svg width="100%" height="auto"`)
+                .replace(/<svg /, `<svg width="100%" height="100%"`)
                 .replace(
                   /fill="[^"]*"/g,
                   `fill="${isHovered ? hoverColor : staticColor}"`
